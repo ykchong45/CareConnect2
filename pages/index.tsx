@@ -1,18 +1,31 @@
-import { ConnectButton } from '@rainbow-me/rainbowkit';
-import type { NextPage } from 'next';
+import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
+import { ConnectButton } from '@rainbow-me/rainbowkit'
 
-const Home: NextPage = () => {
-  return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'flex-end',
-        padding: 12,
-      }}
-    >
-      <ConnectButton />
-    </div>
-  );
-};
+const Index = () => {
+    return (
+        <>
+        <ConnectButton />
+        <Tabs>
+            <TabList>
+                <Tab>One</Tab>
+                <Tab>Two</Tab>
+                <Tab>Three</Tab>
+            </TabList>
 
-export default Home;
+            <TabPanels>
+                <TabPanel>
+                    <p>one!</p>
+                </TabPanel>
+                <TabPanel>
+                    <p>two!</p>
+                </TabPanel>
+                <TabPanel>
+                    <p>three!</p>
+                </TabPanel>
+            </TabPanels>
+        </Tabs>
+        
+        </>
+    )
+}
+export default Index
